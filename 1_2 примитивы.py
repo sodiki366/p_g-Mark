@@ -1,5 +1,6 @@
 #
 from all_colors import *
+import random
 import pygame
 pygame.init()
 size = (1280, 720)
@@ -38,9 +39,9 @@ while running:
     pygame.draw.polygon(screen, ORANGE, ((750, 250),
                                           (800, 450),
                                           (850, 250)))
-    pygame.draw.polygon(screen, ORANGE, ((650, 350),
-                                         (700, 350),
-                                         (750, 350)),3)
+    pygame.draw.polygon(screen, ORANGE, ((300, 350),
+                                         (500, 200),
+                                         (400, 350)),3)
 
     pygame.display.flip()
     clock.tick(FPS)
