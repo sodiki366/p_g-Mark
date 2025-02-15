@@ -3,5 +3,9 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12 (tele_bot)" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (p_g-Mark)" project-jdk-type="Python SDK" />
+>>>>>>> cdd946d12fb565a8fbe3ad7687b89954e0bdb16a
 </project>
