@@ -20,17 +20,27 @@ end_pos = (size[0], size[1]//2)
 
 FPS = 60
 clock = pygame.time.Clock()
+for _ in range(10):
+    x = random.randint(0,1280)
+    y = random.randint(0, 720)
+    radius = random.randint(10,100)
+    color = (random.randint(0,255),random.randint(0,255),random.randint(0,255))
+    pygame.draw.circle(screen, color, (x, y), radius)
+    after(2000 // FPS)
+
 running = True
+
 while running:
     #Обработка событий игры
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
     # Основная логика игры
-    BACKGROUND = random.choice(COLORS)
 
     # Отрисовка объектов
+
     screen.fill(BACKGROUND)#очистка экрана
+
 
 
 
