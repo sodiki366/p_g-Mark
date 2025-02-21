@@ -1,0 +1,45 @@
+
+import random
+from all_colors import *
+import pygame
+pygame.init()
+size = (1280, 720)
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Моя игра")
+BACKGROUND = WHITE
+screen.fill(BACKGROUND)
+x = 0
+y = 0
+rect_size = 200
+colo5rs = [RED, BLACK]
+
+rect1 = pygame.Rect(x,y, rect_size, rect_size)
+rect1.center = (screen.get_width()// 2 , screen.get_height() // 2)
+pygame.draw.rect(screen, BLACK, rect1)
+rect2 = pygame.Rect(x,y, rect_size/2, rect_size/2)
+rect2.center = (screen.get_width()// 2 , screen.get_height() // 2)
+pygame.draw.rect(screen, RED, rect2)
+
+# for i in range(1,18):
+#    rect = pygame.Rect(x, y ,rect_size/i, rect_size/i)
+#    rect.center = (screen.get_width() // 2 , screen.get_height() //2)
+#    # color = colors[i%len(colors)]
+#    # pygame.draw.rect(screen, color , rect)
+
+FPS = 60
+clock = pygame.time.Clock()
+running = True
+while running:
+    # Обработка событий игры
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    #
+    #
+    pygame.display.flip()
+    clock.tick(FPS)
+
+pygame.quit()
+
+
+
