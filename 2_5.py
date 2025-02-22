@@ -19,10 +19,12 @@ for i in range(1,18):
     rect = pygame.Rect(x, y ,rect_size/i, rect_size/i)
     rect.center = (screen.get_width() // 2 , screen.get_height() //2)
     color = random.choice(colors)
+
     pygame.draw.rect(screen,color, rect)
 
 FPS = 60
 clock = pygame.time.Clock()
+timer = 0
 running = True
 while running:
     # Обработка событий игры
@@ -33,6 +35,8 @@ while running:
     #
     pygame.display.flip()
     clock.tick(FPS)
+   
+
 
 pygame.quit()
 
