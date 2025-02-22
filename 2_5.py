@@ -11,20 +11,20 @@ screen.fill(BACKGROUND)
 x = 0
 y = 0
 rect_size = 200
-colo5rs = [RED, BLACK]
+colors =  [RED,GREEN, BLUE, YELLOW, CYAN, MAGENTA, GRAY, ORANGE, PINK, BROWN , PURPLE, LIME, NAVY, OLIVE, MAROON, TEAL, SILVER, GOLD]
 
-rect1 = pygame.Rect(x,y, rect_size, rect_size)
-rect1.center = (screen.get_width()// 2 , screen.get_height() // 2)
-pygame.draw.rect(screen, BLACK, rect1)
-rect2 = pygame.Rect(x,y, rect_size/2, rect_size/2)
-rect2.center = (screen.get_width()// 2 , screen.get_height() // 2)
-pygame.draw.rect(screen, RED, rect2)
+# rect1 = pygame.Rect(x,y, rect_size, rect_size)
+# rect1.center = (screen.get_width()// 2 , screen.get_height() // 2)
+# pygame.draw.rect(screen, BLACK, rect1)
+# rect2 = pygame.Rect(x,y, rect_size/2, rect_size/2)
+# rect2.center = (screen.get_width()// 2 , screen.get_height() // 2)
+# pygame.draw.rect(screen, RED, rect2)
 
-# for i in range(1,18):
-#    rect = pygame.Rect(x, y ,rect_size/i, rect_size/i)
-#    rect.center = (screen.get_width() // 2 , screen.get_height() //2)
-#    # color = colors[i%len(colors)]
-#    # pygame.draw.rect(screen, color , rect)
+for i in range(1,18):
+    rect = pygame.Rect(x, y ,rect_size/i, rect_size/i)
+    rect.center = (screen.get_width() // 2 , screen.get_height() //2)
+    color = random.choice(colors)
+    pygame.draw.rect(screen,color, rect)
 
 FPS = 60
 clock = pygame.time.Clock()
