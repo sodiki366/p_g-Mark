@@ -31,6 +31,7 @@ missile_alive = True
 
 missile_launched = False
 hp_ship = 1
+screen_rect = screen.get_rect()
 
 FPS = 120
 clock = pygame.time.Clock()
@@ -47,10 +48,24 @@ while running:
                 missile_speed_x = 3
                 missile_speed_y = 0
 
+            elif event.key == pygame.K_w and not missile_launched:
+                missile_speed_y = -2
+            elif event.key == pygame.K_s and not missile_launched:
+                missile_speed_y = 2
+
 
     # Основная логика игры
     if missile_alive:
         missile.move_ip(missile_speed_x, missile_speed_y)
+        if not missile.colliderect(screen_rect):
+            missile_alive = False
+        if ship_alive and missile_colliderect(ship):
+           missile_alive = False
+           ship_alive = False
+    if ship_alive:
+        ship.move_ip(0, ship_speed_y)
+    if ship.bottom > screen_rect.bottom or ship.top < screen_rect.top:
+        ship_speed_y = -ship_speed_y
     # Отрисовка объектов
 
     screen.fill(BACKGROUND)#очистка экрана
