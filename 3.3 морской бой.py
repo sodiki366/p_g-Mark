@@ -6,7 +6,7 @@ pygame.init()
 import pygame.mixer
 pygame.mixer.init()
 
-shot_sound = pygame.mixer.Sound('')
+# shot_sound = pygame.mixer.Sound('')
 size = (1280, 720)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("My Game")
