@@ -32,7 +32,7 @@ ship_alive = True
 missile_alive = True
 
 missile_launched = False
-hp_ship = 1
+hp_ship = 10
 screen_rect = screen.get_rect()
 
 FPS = 120
