@@ -61,7 +61,7 @@ while running:
         missile.move_ip(missile_speed_x, missile_speed_y)
         if not missile.colliderect(screen_rect):
             missile_alive = False
-        if ship_alive and missile_colliderect(ship):
+        if ship_alive and missile.colliderect(ship):
            missile_alive = False
            ship_alive = False
     if ship_alive:
