@@ -1,3 +1,4 @@
+#
 import pygame
 pygame.init()
 size = (1280, 720)
